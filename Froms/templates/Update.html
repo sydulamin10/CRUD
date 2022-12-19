@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> update </title>
+</head>
+<body>
+
+    {% for i in pro %}
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <label>Name: </label>
+            <input type="text" name="name" value="{{i.name}}">
+            <br><br>
+
+            <label>E-mail:</label>
+            <input type="email" name="email" value="{{i.email}}">
+            <br><br>
+            <br><br>
+            <input type="file" name="fileupload" value="fileupload" id="fileupload">
+            <br>
+            <br><br>
+            <input type="submit">
+
+        </form>
+    {% endfor %}
+
+
+
+</body>
+</html>
